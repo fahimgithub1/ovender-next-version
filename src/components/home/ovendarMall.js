@@ -1,7 +1,7 @@
 import SectionWrapper from "@/layouts/sectionWrapper";
 import ProductCard from "@/lib/productCard";
 import React from "react";
-import OvendarMallTitle from "./OvendarMallTitle";
+import OvendarMallTitle from "./ovendarMallTitle";
 // import imgm from "/images/prduct.jpg"
 
 const productInfo = [

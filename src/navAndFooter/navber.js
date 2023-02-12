@@ -1,6 +1,6 @@
 import MidNav from "./midNav";
 import MobileNav from "./mobileNav";
-import TopNav from "./TopNav";
+import TopNav from "./topNav";
 
 export default function Navber() {
   return (
