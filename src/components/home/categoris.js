@@ -2,7 +2,7 @@ import BgWrapper from '@/layouts/bgWrapper'
 import SectionTitle from '@/lib/sectionTitle'
 import React from 'react'
 import { Swiper,SwiperSlide } from 'swiper/react';
-import { FreeMode } from 'swiper';
+import { FreeMode  } from "swiper";
 
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -58,7 +58,9 @@ export default function Categoris() {
 
         <Swiper 
             freeMode= {true}
-            modules= {[FreeMode]}
+            modules={[FreeMode]}
+            // loop={true}
+            // autoplay={true}
             className= "mySwiper"
             grabCursor={true}
             slidesPerView="auto"

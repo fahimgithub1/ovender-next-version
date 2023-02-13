@@ -1,35 +1,33 @@
 Main Point
 ============
-    1)home page=> (done)
-        .nav (done)
-        .footer (done) 
-        .shopingType (done)
-        .banner (done)
-        .flash sall (done)
-        .catagoris (done)
-        .oven mall (done)
-        .most poruler (done)
-        .Daily Discover (done)
+    1)home page=> (done Fahim)
+        .nav (done)   (Fahim)
+        .footer (done)  (Fahim)
+        .shopingType (done)  (Fahim)
+        .banner (done)  (Fahim)
+        .flash sall (done)  (Fahim)
+        .catagoris (done)  (Fahim)
+        .oven mall (done)  (Fahim)
+        .most poruler (done)  (Fahim)
+        .Daily Discover (done)  (Fahim)
+    4)flash sell (done Fahim)
+    5)Rewards And Gift (done Fahim)
+    9)blog (done Fahim)
 
-    2)product single page 
+    2)product single page (Fahim)
         .product area
         .product datails
         .product review
         .shop daitelsw
         .related product dote
 
+    6)chart, wish page  (Fahim)
+    8)login (done Fahim)
+    10**)User Profile
+
+    // **** pervise vhai ***** 
     3)catagori page (pervise vhai)
-    5)Rewards And Gift
-
-    4)flash sell
-
-    6)chart, wish page 
-    8)login
-    10**)User Profile 
-    
     7)contact us (pervise vhai)
-    9)blog 
-
 others
 ===========
     How to Shop (pervise vhai)
@@ -40,4 +38,4 @@ others
 
 ************************
 ========================
-   saller panel (last)
+   saller panel (no need)

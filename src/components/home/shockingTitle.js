@@ -13,7 +13,7 @@ export default function ShockingTitle() {
         </div>
       </div>
 
-      <Link href="/categories" className="seaAll">
+      <Link href="/shockingSale" className="seaAll">
         See All
       </Link>
     </div>

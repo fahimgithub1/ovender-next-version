@@ -1,12 +1,12 @@
 import BgWrapper from "@/layouts/bgWrapper";
-import React from "react";
-import ShockingTitle from "./shockingTitle";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode } from "swiper";
-
-import "swiper/css";
-import "swiper/css/free-mode";
+import BodyWrapper from "@/layouts/bodyWrapper";
+import PagesHeros from "@/lib/pagesHeros";
+import ProductCard from "@/lib/productCard";
 import ShockingProductCard from "@/lib/shockingProductCard";
+import { useRouter } from "next/router";
+import React, { Fragment } from "react";
+
+const img = "dsfa";
 
 const productInfo = [
   {
@@ -391,45 +391,39 @@ const productInfo = [
   },
 ];
 
-export default function ShockingSale() {
-  return (
-    <BgWrapper>
-      <ShockingTitle />
+export default function MainBodyShocking() {
 
-      <Swiper
-        freeMode={true}
-        modules={[FreeMode]}
-        // loop={true}
-        // autoplay={true}
-        className="mySwiper"
-        grabCursor={true}
-        slidesPerView="auto"
-        spaceBetween={10}
-        breakpoints={{
-          0: {
-            slidesPerView: 2,
-          },
-          767: {
-            slidesPerView: 4,
-          },
-          1024: {
-            slidesPerView: 7,
-          },
-        }}
-      >
-        {productInfo.map((item) => (
-          <SwiperSlide key={item.id}>
-            <ShockingProductCard
-              key={item.id}
-              id={item.id}
-              price={item.price}
-              disCount={item.disCount}
-              sold={item.sold}
-              img={item.img}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </BgWrapper>
+  return (
+    <BodyWrapper>
+      <PagesHeros img={img} />
+
+      <div className="container RewardsAndGift">
+        <div className="row mt-2 mt-lg-5 mt-md-3">
+          <BgWrapper>
+            <div className="row">
+              {productInfo.map((item) => (
+                <Fragment key={item.id}>
+                  <div
+                    className="col-6 col-lg-2 col-md-4 col-sm-4"
+                    key={item.id}
+                  >
+                    <ShockingProductCard
+                      key={item.id}
+                      id={item.id}
+                      price={item.price}
+                      disCount={item.disCount}
+                      sold={item.sold}
+                      img={item.img}
+                      ProCardClass="shokingProCard"
+                    />
+                    {}
+                  </div>
+                </Fragment>
+              ))}
+            </div>
+          </BgWrapper>
+        </div>
+      </div>
+    </BodyWrapper>
   );
 }

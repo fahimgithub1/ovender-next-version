@@ -3,7 +3,7 @@ import BodyWrapper from "@/layouts/bodyWrapper";
 import PagesHeros from "@/lib/pagesHeros";
 import ProductCard from "@/lib/productCard";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { Fragment} from "react";
 
 const img = 'dsfa'
 
@@ -149,7 +149,7 @@ const productInfo = [
     rewards: 'Digital Sheba'
   },
   {
-    id: 14,
+    id: 15,
     name: "Veet Full Body Waxing Kit for Dry Skin - 20 strips",
     price: 45,
     disCount: 30,
@@ -394,7 +394,7 @@ export default function MainBodyRewards() {
   const router = useRouter()
   const rewardpage  = router.query.rewardpage;
   let reward1 = rewardpage;
-  console.log(reward1)
+  // console.log(reward1)
  
   return (
     <BodyWrapper>
@@ -405,7 +405,7 @@ export default function MainBodyRewards() {
           <BgWrapper>
             <div className="row">
               {productInfo.map((item) => (
-                <>
+                <Fragment key={item.id}>
                   {item.rewards === reward1 ? 
                     <div className="col-6 col-lg-2 col-md-3 col-sm-4" key={item.id}>
                       <ProductCard
@@ -423,7 +423,7 @@ export default function MainBodyRewards() {
                   ""
                   // <div className="text-center"><p>not itmes found</p></div>
                   }
-                </>
+                </Fragment>
               ))}
             </div>
           </BgWrapper>
