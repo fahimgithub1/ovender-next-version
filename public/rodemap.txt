@@ -1,0 +1,43 @@
+Main Point
+============
+    1)home page=> (done)
+        .nav (done)
+        .footer (done) 
+        .shopingType (done)
+        .banner (done)
+        .flash sall (done)
+        .catagoris (done)
+        .oven mall (done)
+        .most poruler (done)
+        .Daily Discover (done)
+
+    2)product single page 
+        .product area
+        .product datails
+        .product review
+        .shop daitelsw
+        .related product dote
+
+    3)catagori page (pervise vhai)
+    5)Rewards And Gift
+
+    4)flash sell
+
+    6)chart, wish page 
+    8)login
+    10**)User Profile 
+    
+    7)contact us (pervise vhai)
+    9)blog 
+
+others
+===========
+    How to Shop (pervise vhai)
+    Returns and Refunds (pervise vhai)
+    About Ovenar (pervise vhai)
+    Terms & Conditions (pervise vhai)
+    Privacy Policy (pervise vhai)
+
+************************
+========================
+   saller panel (last)
