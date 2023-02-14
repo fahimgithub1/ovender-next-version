@@ -13762,10 +13762,26 @@ button.FaBtn.RegistBtn.LoginBtn{
 }
 
 .phaymentInfoFrom h3{
-    color: #2c66af;
+    color: #940000;
     font-size: 20px;
     font-weight: 600;
-    line-height: 16px;
+    text-align: left;
+    padding: 5px 10px;
+    background: var(--bgColor);
+    display: block;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.phaymentInfoFrom div div{
+    justify-content: start !important;
+}
+.phaymentInfoFrom h3 i{
+    color: var(--bgColor);
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 50%;
+    background: #940000;
+    margin-right: .5rem;
 }
 
 .collectedAddress{
