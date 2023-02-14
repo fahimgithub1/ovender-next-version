@@ -1,7 +1,7 @@
 
 import React from 'react'
 import ImageView from './imageView'
-import TopMid from './TopMid'
+import TopMid from './topMid'
 import TopRight from './topRight'
 
 export default function ProductView() {
