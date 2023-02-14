@@ -13,7 +13,7 @@ export default function Login(props) {
         <input type="text" placeholder="Enter User Password" />
 
         <button className="FaBtn">
-          <Link href="./UserProfile.html">Login</Link>
+          <Link href="/userProfile">Login</Link>
         </button>
 
         <label

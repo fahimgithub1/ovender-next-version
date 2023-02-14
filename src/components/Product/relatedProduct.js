@@ -1,4 +1,4 @@
-import BgWrapper from "@/layouts/bgWrapper";
+import SectionWrapper from "@/layouts/sectionWrapper";
 import SectionTitle from "@/lib/sectionTitle";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -6,7 +6,7 @@ import { FreeMode } from "swiper";
 
 import "swiper/css";
 import "swiper/css/free-mode";
-import PopulerCard from "./populerCard";
+import ProductCard from "@/lib/productCard";
 
 const productInfo = [
   {
@@ -83,10 +83,10 @@ const productInfo = [
   },
 ];
 
-export default function MostPopuler() {
+export default function RelatedProduct() {
   return (
-    <BgWrapper bgClass="MostPopularSection">
-      <SectionTitle title="Most Popular" />
+    <SectionWrapper sectionClass="RelatedProductSec">
+      <SectionTitle title="Related Products" />
 
       <Swiper
         freeMode={true}
@@ -109,16 +109,19 @@ export default function MostPopuler() {
       >
         {productInfo.map((item) => (
           <SwiperSlide key={item.id}>
-            <PopulerCard
+            <ProductCard
               key={item.id}
               id={item.id}
               name={item.name}
+              price={item.price}
+              disCount={item.disCount}
+              sold={item.sold}
               star={item.star}
               img={item.img}
             />
           </SwiperSlide>
         ))}
       </Swiper>
-    </BgWrapper>
+    </SectionWrapper>
   );
 }

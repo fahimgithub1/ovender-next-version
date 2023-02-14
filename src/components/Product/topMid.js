@@ -95,8 +95,8 @@ export default function TopMid() {
                       min="1"
                       max="100"
                       step="1"
-                      value="1"
-                      readonly
+                      defaultValue="1"
+                      readOnly 
                     />
                     <div className="quantity-nav">
                       <div className="quantity-button quantity-down">

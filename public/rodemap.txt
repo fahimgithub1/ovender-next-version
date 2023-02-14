@@ -1,40 +1,40 @@
 Main Point
 ============
     1)home page=> (done Fahim)
-        .nav (done)   (Fahim)
-        .footer (done)  (Fahim)
-        .shopingType (done)  (Fahim)
-        .banner (done)  (Fahim)
-        .flash sall (done)  (Fahim)
-        .catagoris (done)  (Fahim)
-        .oven mall (done)  (Fahim)
-        .most poruler (done)  (Fahim)
-        .Daily Discover (done)  (Fahim)
-    4)flash sell (done Fahim)
-    5)Rewards And Gift (done Fahim)
-    9)blog (done Fahim)
-
-    2)product single page (Fahim)
+        .nav (done) (Fahim)
+        .footer (done) (Fahim)
+        .shopingType (done) (Fahim)
+        .banner (done) (Fahim)
+        .flash sall (done) (Fahim)
+        .catagoris (done) (Fahim)
+        .oven mall (done) (Fahim)
+        .most poruler (done) (Fahim)
+        .Daily Discover (done) (Fahim)
+    2)product single page (done Fahim)
         .product area
         .product datails
         .product review
         .shop daitelsw
         .related product dote
-
-    6)chart, wish page  (Fahim)
+    4)flash sell (done Fahim)
+    5)Rewards And Gift (done Fahim)
+    6)chart, wish page (done Fahim)
     8)login (done Fahim)
+    9)blog (done Fahim)
+
     10**)User Profile
 
     // **** pervise vhai ***** 
     3)catagori page (pervise vhai)
     7)contact us (pervise vhai)
+    
 others
 ===========
-    How to Shop (pervise vhai)
-    Returns and Refunds (pervise vhai)
+    How to Shop (done Fahim)
+    Returns and Refunds (done Fahim)
     About Ovenar (pervise vhai)
-    Terms & Conditions (pervise vhai)
-    Privacy Policy (pervise vhai)
+    Terms & Conditions (done Fahim)
+    Privacy Policy (done Fahim)
 
 ************************
 ========================

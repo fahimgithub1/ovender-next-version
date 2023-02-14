@@ -4,7 +4,7 @@ import React from "react";
 export default function PopulerCard(props) {
   return (
     <div className="ProductCard ProductCard1">
-      <Link href="/Product/[id]" className="d-block">
+      <Link href={`/Product/${props.id}`} className="d-block">
         <div className="ImageBox">
           <img src="/images/prduct.jpg" alt="" />
         </div>

@@ -310,6 +310,7 @@ export default function DailyProduct() {
           <div className="col-6 col-lg-2 col-md-3 col-sm-4" key={item.id}>
             <ProductCard
               key={item.id}
+              id={item.id}
               name={item.name}
               price={item.price}
               disCount={item.disCount}

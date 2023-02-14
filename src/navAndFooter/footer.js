@@ -36,7 +36,7 @@ export default function Footer(){
                                 <Link href="/tramsAndConditon">Privacy Policy</Link>
                             </li>
                             <li>
-                                <Link href="/blog">Ovendar Blog</Link>
+                                <Link href="/blogs">Ovendar Blog</Link>
                             </li>
                         </ul>
                     </div>

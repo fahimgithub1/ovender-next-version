@@ -90,6 +90,7 @@ export default function OvendarMall() {
             {/* {item.id <= 6 ? */}
             <ProductCard
               key={item.id}
+              id={item.id}
               name={item.name}
               price={item.price}
               disCount={item.disCount}

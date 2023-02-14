@@ -2,9 +2,12 @@ import Link from "next/link";
 import React from "react";
 
 export default function ProductCard(props) {
+
+  const porductID = props.id;
+
   return (
     <div className="ProductCard ProductCard1">
-      <Link href={`./Product/${props.id}`} className="d-block">
+      <Link href={`/Product/${porductID}`} className="d-block">
         <div className="ImageBox">
           <img src="/images/prduct.jpg" alt="" />
         </div>

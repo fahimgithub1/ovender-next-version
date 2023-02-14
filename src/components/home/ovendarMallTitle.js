@@ -1,6 +1,8 @@
 import Link from "next/link";
 import React from "react";
 
+const rewardpage = "Oven Mall"
+
 export default function OvendarMallTitle() {
   return (
     <div className="sectionTitle TitleOvemderMall">
@@ -16,7 +18,7 @@ export default function OvendarMallTitle() {
         </div>
       </div>
 
-      <Link href="/categories" className="seaAll">
+      <Link href={`/rewardsAndGift/${rewardpage}`} className="seaAll">
         See All
       </Link>
     </div>
