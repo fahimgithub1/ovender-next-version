@@ -1,5 +1,5 @@
 import LeftMenu from "@/components/userProfile/leftMenu";
-import RightSide from "@/components/userProfile/RightSide";
+import RightSide from "@/components/userProfile/rightSide";
 import SectionWrapper from "@/layouts/sectionWrapper";
 import HeaderCom from "@/lib/header";
 import Footer from "@/navAndFooter/footer";
