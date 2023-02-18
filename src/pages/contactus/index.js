@@ -6,10 +6,10 @@ import Navber from "@/navAndFooter/navber";
 import React from "react";
 
 
-export default function UserProfile() {
+export default function ContactUS() {
   return (
     <>
-      <HeaderCom title="PrivacyPolicy" />
+      <HeaderCom title="Contact Us" />
 
       <main>
         <Navber />

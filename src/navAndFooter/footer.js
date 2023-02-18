@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer(){
     return(
-        <footer className="bgPadding">
+        <footer className="bgPadding mb-0">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-4 col-md-4">
@@ -73,7 +73,7 @@ export default function Footer(){
                 <img src="/images/payment.png" alt="Ovender Logo" />
             </div>
 
-            <div>
+            <div className="copWrite">
                 <p className="text-center">©2022 Ovendar. All Rights Reserved. | Design & Development By:- Digital Marketing Solution (Pvt.) Ltd.</p>
             </div>
         </footer>
