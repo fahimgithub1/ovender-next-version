@@ -21,8 +21,7 @@ Main Point
     6)chart, wish page (done Fahim)
     8)login (done Fahim)
     9)blog (done Fahim)
-
-    10**)User Profile
+    10**)User Profile(done Fahim)
 
     // **** pervise vhai ***** 
     3)catagori page (pervise vhai)
