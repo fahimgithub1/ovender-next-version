@@ -317,8 +317,8 @@ export default function DailyProduct() {
               price={item.price}
               disCount={0}
               sold={item.sold}
-              // star={item.reviews.average_rating}
-              // img={item.images[0].large_image_url}
+              star={item.reviews.average_rating}
+              img={item.images[0].large_image_url}
             />
           </div>
         ))}
