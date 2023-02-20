@@ -1756,7 +1756,6 @@ section.CommonpaddingSection.tab-section.productPhonemargin.WidhPage{
 }
 
 .product-view-area ul li:not(:last-child){
-    /* display: block; */
     margin-right: .4rem;
 }
 
@@ -1777,20 +1776,8 @@ section.CommonpaddingSection.tab-section.productPhonemargin.WidhPage{
     border-bottom: 1px solid grey;
 }
 
-.BigImg a{
-    width: 100% !important; 
-    min-height: 359px;
-    max-width: auto;
-}
-
-.BigImg figure{
-    width: 100% !important; 
-    display: flex;
-    justify-content: center;
-}
-
 .BigImg img{
-    width: 100% !important; 
+    position: none !important;
 }
 
 .VariantColor{
@@ -1869,7 +1856,6 @@ section.CommonpaddingSection.tab-section.productPhonemargin.WidhPage{
     margin-right: 0.4rem;
     border-radius: 5px;
     color: var(--logoColor-1);
-    /* border: 1px solid #ff863f; */
     cursor: pointer;
     margin-bottom: .5rem;
 }
@@ -1885,7 +1871,6 @@ section.CommonpaddingSection.tab-section.productPhonemargin.WidhPage{
 }
 
 .BuyBoth .Bothtitle{
-    /* padding: 10px; */
     font-weight: bold;
     color: var(--logoColor-1);
     padding-bottom: 0;
@@ -2217,8 +2202,6 @@ section.CommonpaddingSection.tab-section.productPhonemargin.WidhPage{
     font-size: 14px;
 }
 .product-view-area .part-txt .product-share .social a {
-    /* color: #ffffff;
-    background: #2c66af; */
     border: 1px solid black;
     color: #000000;
     padding: 5px;
@@ -4667,8 +4650,6 @@ section.CommonpaddingSection.tab-section.productPhonemargin.WidhPage{
         line-height: 22px;
     }
 }
-
-
 @media screen and (max-width: 991px) {
     .product-view-area{
         padding-bottom: .5rem;
@@ -5296,7 +5277,6 @@ input:focus,input:hover{
 
 .nav-item i {
     color: black;
-    /* margin-top: 8px; */
     font-size: 13px;
 }
 
@@ -5316,10 +5296,6 @@ input:focus,input:hover{
 
 .nav-item:not(:last-child){
     border-bottom: 1px solid var(--logoColor-1);
-}
-
-.NavSubBranceHover:hover .TabletopSubMenu{
-    /* display: block; */
 }
 
 .nav-item img{
@@ -5377,31 +5353,10 @@ input:focus,input:hover{
     transition: all 5s;
 }
 
-@keyframes gradient {
-    0% {
-		background: linear-gradient(-28deg, #e71303, #de7d2d);
-
-        transition: all 5s;
-	}
-	50% {
-		background: linear-gradient(50deg, rgb(170, 17, 17), #de7d2d);
-
-        transition: all 5s;
-	}
-	100% {
-		background: linear-gradient(28deg, #920d03, #ff7300);
-
-        transition: all 5s;
-	}
-}
-/* nav for tabe and mobile end */
-/* navigatin end */
-
 /* Copy form templet start */
 .NavSubBranceLI{
     padding: 0 !important;
     position: relative;
-    /* z-index: 10; */
 }
 
 .category-sub-menu {
@@ -6530,7 +6485,6 @@ button.FaBtn.RegistBtn.LoginBtn{
     #Orders{
         margin-bottom: .5rem;
     }
-    
 }
 
 :root {
@@ -6929,6 +6883,10 @@ button.FaBtn.RegistBtn.LoginBtn{
 
     .sectionMarginBot{
         margin-bottom: 0px;
+    }
+
+    .catagorisMain{
+        margin-top: 0px;
     }
 
     .HerosSection .carousel img{

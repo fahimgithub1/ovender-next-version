@@ -1,6 +1,8 @@
 import Link from "next/link";
 
 export default function LaptopMenu() {
+  const categoriesID = 10;
+
   return (
     <div className="NavClickAction">
       <ul className="navbar-nav">
@@ -9,7 +11,7 @@ export default function LaptopMenu() {
             <Link
               className="nav-link"
               aria-current="page"
-              href="/categories"
+              href={`/categories/${categoriesID}`}
             >
               Furniture
             </Link>
@@ -21,7 +23,7 @@ export default function LaptopMenu() {
             <Link
               className="nav-link"
               aria-current="page"
-              href="/categories"
+              href={`/categories/${categoriesID}`}
             >
               Holiday
             </Link>
@@ -33,7 +35,7 @@ export default function LaptopMenu() {
             <Link
               className="nav-link"
               aria-current="page"
-              href="/categories"
+              href={`/categories/${categoriesID}`}
             >
               Lighting
             </Link>
@@ -45,7 +47,7 @@ export default function LaptopMenu() {
             <Link
               className="nav-link"
               aria-current="page"
-              href="/categories"
+              href={`/categories/${categoriesID}`}
             >
               Bath
             </Link>
@@ -57,7 +59,7 @@ export default function LaptopMenu() {
             <Link
               className="nav-link"
               aria-current="page"
-              href="/categories"
+              href={`/categories/${categoriesID}`}
             >
               Improvemetn
             </Link>
@@ -70,7 +72,7 @@ export default function LaptopMenu() {
               <Link
                 className="nav-link"
                 aria-current="page"
-                href="/categories"
+                href={`/categories/${categoriesID}`}
               >
                 Tabletop
               </Link>
@@ -88,36 +90,36 @@ export default function LaptopMenu() {
                 <h4>Living Room</h4>
                 <ul>
                   <li>
-                    <Link href="/categories">Dresses</Link>
+                    <Link href={`/categories/${categoriesID}`}>Dresses</Link>
                   </li>
                   <li>
-                    <Link href="/categories">Jeggings</Link>
+                    <Link href={`/categories/${categoriesID}`}>Jeggings</Link>
                   </li>
                   <li>
-                    <Link href="/categories">Kurtis</Link>
+                    <Link href={`/categories/${categoriesID}`}>Kurtis</Link>
                   </li>
                   <li>
-                    <Link href="/categories">
+                    <Link href={`/categories/${categoriesID}`}>
                       Palazzo Pants & Culottes
                     </Link>
                   </li>
                   <li>
-                    <Link href="/categories">Pants</Link>
+                    <Link href={`/categories/${categoriesID}`}>Pants</Link>
                   </li>
                   <li>
-                    <Link href="/categories">Shapewear</Link>
+                    <Link href={`/categories/${categoriesID}`}>Shapewear</Link>
                   </li>
                   <li>
-                    <Link href="/categories">Skirts</Link>
+                    <Link href={`/categories/${categoriesID}`}>Skirts</Link>
                   </li>
                   <li>
-                    <Link href="/categories">Tops</Link>
+                    <Link href={`/categories/${categoriesID}`}>Tops</Link>
                   </li>
                   <li>
-                    <Link href="/categories">T-Shirts</Link>
+                    <Link href={`/categories/${categoriesID}`}>T-Shirts</Link>
                   </li>
                   <li>
-                    <Link href="/categories">Tunics</Link>
+                    <Link href={`/categories/${categoriesID}`}>Tunics</Link>
                   </li>
                 </ul>
               </div>
@@ -125,37 +127,37 @@ export default function LaptopMenu() {
                 <h4>Bed Room Furniture</h4>
                 <ul>
                   <li>
-                    <Link href="/categories">Ballet Flats</Link>
+                    <Link href={`/categories/${categoriesID}`}>Ballet Flats</Link>
                   </li>
                   <li>
-                    <Link href="/categories">Pumps</Link>
+                    <Link href={`/categories/${categoriesID}`}>Pumps</Link>
                   </li>
                   <li>
-                    <Link href="/categories">Closed-Toe Wedges</Link>
+                    <Link href={`/categories/${categoriesID}`}>Closed-Toe Wedges</Link>
                   </li>
                   <li>
-                    <Link href="/categories">Fashion Boots</Link>
+                    <Link href={`/categories/${categoriesID}`}>Fashion Boots</Link>
                   </li>
                   <li>
-                    <Link href="/categories">Flat Sandals</Link>
+                    <Link href={`/categories/${categoriesID}`}>Flat Sandals</Link>
                   </li>
                   <li>
-                    <Link href="/categories">Flip Flops</Link>
+                    <Link href={`/categories/${categoriesID}`}>Flip Flops</Link>
                   </li>
                   <li>
-                    <Link href="/categories">Heeled Sandals</Link>
+                    <Link href={`/categories/${categoriesID}`}>Heeled Sandals</Link>
                   </li>
                   <li>
-                    <Link href="/categories">House Slippers</Link>
+                    <Link href={`/categories/${categoriesID}`}>House Slippers</Link>
                   </li>
                   <li>
-                    <Link href="/categories">Slip-Ons</Link>
+                    <Link href={`/categories/${categoriesID}`}>Slip-Ons</Link>
                   </li>
                   <li>
-                    <Link href="/categories">Sneakers</Link>
+                    <Link href={`/categories/${categoriesID}`}>Sneakers</Link>
                   </li>
                   <li>
-                    <Link href="/categories">Wedge Sandals</Link>
+                    <Link href={`/categories/${categoriesID}`}>Wedge Sandals</Link>
                   </li>
                 </ul>
               </div>
@@ -163,19 +165,19 @@ export default function LaptopMenu() {
                 <h4>kitchen & Dining</h4>
                 <ul>
                   <li>
-                    <Link href="/categories">Fashion</Link>
+                    <Link href={`/categories/${categoriesID}`}>Fashion</Link>
                   </li>
                   <li>
-                    <Link href="/categories">Casual</Link>
+                    <Link href={`/categories/${categoriesID}`}>Casual</Link>
                   </li>
                   <li>
-                    <Link href="/categories">Business</Link>
+                    <Link href={`/categories/${categoriesID}`}>Business</Link>
                   </li>
                   <li>
-                    <Link href="/categories">Sports</Link>
+                    <Link href={`/categories/${categoriesID}`}>Sports</Link>
                   </li>
                   <li>
-                    <Link href="/categories">Accessories</Link>
+                    <Link href={`/categories/${categoriesID}`}>Accessories</Link>
                   </li>
                 </ul>
               </div>
@@ -188,7 +190,7 @@ export default function LaptopMenu() {
             <Link
               className="nav-link"
               aria-current="page"
-              href="/categories"
+              href={`/categories/${categoriesID}`}
             >
               Kitchern
             </Link>
@@ -200,7 +202,7 @@ export default function LaptopMenu() {
             <Link
               className="nav-link"
               aria-current="page"
-              href="/categories"
+              href={`/categories/${categoriesID}`}
             >
               Bedding
             </Link>
@@ -212,7 +214,7 @@ export default function LaptopMenu() {
             <Link
               className="nav-link"
               aria-current="page"
-              href="/categories"
+              href={`/categories/${categoriesID}`}
             >
               Baby and Kids
             </Link>
@@ -224,7 +226,7 @@ export default function LaptopMenu() {
             <Link
               className="nav-link"
               aria-current="page"
-              href="/categories"
+              href={`/categories/${categoriesID}`}
             >
               Celling
             </Link>
@@ -236,7 +238,7 @@ export default function LaptopMenu() {
             <Link
               className="nav-link"
               aria-current="page"
-              href="/categories"
+              href={`/categories/${categoriesID}`}
             >
               Home Ber
             </Link>
@@ -248,7 +250,7 @@ export default function LaptopMenu() {
             <Link
               className="nav-link"
               aria-current="page"
-              href="/categories"
+              href={`/categories/${categoriesID}`}
             >
               Pet Supplies
             </Link>

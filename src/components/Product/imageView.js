@@ -1,7 +1,12 @@
 import Link from "next/link";
 import React from "react";
 import SmalImagBlox from "./smalImagBlox";
+import ReactImageMagnify from "react-image-magnify";
 
+const watchImg687 =
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6O3yPSboyC931ngvDI0RDfDfZFMqc1PtsnsAvk6t7&s";
+const watchImg1200 =
+  "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZHVjdHN8ZW58MHx8MHx8&w=1000&q=80";
 // import img "/images/prduct.jpg"s
 
 const smalImages = [
@@ -22,10 +27,22 @@ const smalImages = [
 export default function ImageView() {
   return (
     <div className="col-lg-5 col-md-5 col-sm-5">
-      <div className="BigImg">
-        <Link href="./images/prduct.jpg" className="MagicZoom" id="jeans">
-          <img src="/images/prduct.jpg" alt="" />
-        </Link>
+      <div className="fluid__image-container">
+        <ReactImageMagnify
+          {...{
+            smallImage: {
+              alt: "Wristwatch by Ted Baker London",
+              isFluidWidth: true,
+              src: watchImg687,
+            },
+            largeImage: {
+              src: watchImg1200,
+              width: 1200,
+              height: 1800,
+            },
+            shouldUsePositiveSpaceLens: true,
+          }}
+        />
       </div>
 
       <div className="SmallImg d-flex">
