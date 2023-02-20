@@ -1,7 +1,7 @@
 import SectionWrapper from "@/layouts/sectionWrapper";
 import ProductCard from "@/lib/productCard";
 import SectionTitle from "@/lib/sectionTitle";
-import { useGetAllProductsQuery } from "@/pages/api/testApiSlice";
+import { useGetAllProductsQuery } from "@/pages/api/apiSlices";
 import React, { useState } from "react";
 
 const productInfo2 = [
@@ -298,7 +298,6 @@ const productInfo2 = [
 export default function DailyProduct() {
   const [limit, setLimit] = useState(10);
   const { data: productInfo, isLoading, error } = useGetAllProductsQuery();
-  console.log(productInfo)
 
   const handleLimit = () => {
     setLimit(limit + 12);

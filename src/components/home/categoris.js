@@ -7,7 +7,7 @@ import { FreeMode } from "swiper";
 import "swiper/css";
 import "swiper/css/free-mode";
 import CategorisCard from "./CategorisCard";
-import { useGetAllCategorisQuery } from "@/pages/api/testApiSlice";
+import { useGetAllCategorisQuery } from "@/pages/api/apiSlices";
 
 const owlitmes = [
   {
@@ -53,8 +53,7 @@ const owlitmes = [
 ];
 
 export default function Categoris() {
-  const { data: Categories, error, isLoading } = useGetAllCategorisQuery;
-  console.log(Categories)
+  const { data: Categories, error, isLoading } = useGetAllCategorisQuery();
 
   return (
     <BgWrapper>
@@ -79,9 +78,13 @@ export default function Categoris() {
           },
         }}
       >
-        {owlitmes.map((item) => (
+        {Categories.data.map((item) => (
           <SwiperSlide key={item.id}>
-            <CategorisCard name={item.name} />
+            <CategorisCard
+              name={item.name}
+              slug={item.slug}
+              img={item.image_url}
+            />
           </SwiperSlide>
         ))}
       </Swiper>
