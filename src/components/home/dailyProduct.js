@@ -1,9 +1,10 @@
 import SectionWrapper from "@/layouts/sectionWrapper";
 import ProductCard from "@/lib/productCard";
 import SectionTitle from "@/lib/sectionTitle";
+import { useGetAllProductsQuery } from "@/pages/api/testApiSlice";
 import React, { useState } from "react";
 
-const productInfo = [
+const productInfo2 = [
   {
     id: 1,
     name: "Veet Full Body Waxing Kit for Dry Skin - 20 strips",
@@ -122,7 +123,7 @@ const productInfo = [
     img: require("../../../public/images/prduct.jpg"),
   },
   {
-    id: 14,
+    id: 140,
     name: "Veet Full Body Waxing Kit for Dry Skin - 20 strips",
     price: 45,
     disCount: 30,
@@ -296,9 +297,11 @@ const productInfo = [
 
 export default function DailyProduct() {
   const [limit, setLimit] = useState(10);
+  const { data: productInfo, isLoading, error } = useGetAllProductsQuery();
+  console.log(productInfo)
 
   const handleLimit = () => {
-    setLimit(limit + 4);
+    setLimit(limit + 12);
   };
 
   return (
@@ -306,20 +309,23 @@ export default function DailyProduct() {
       <SectionTitle title="Daily Discover" />
 
       <div className="row">
-        {productInfo.slice(0, limit).map((item) => (
+        {!error && productInfo.data.slice(0, limit).map((item) => (
           <div className="col-6 col-lg-2 col-md-3 col-sm-4" key={item.id}>
             <ProductCard
               key={item.id}
               id={item.id}
               name={item.name}
               price={item.price}
-              disCount={item.disCount}
+              disCount={0}
               sold={item.sold}
-              star={item.star}
-              img={item.img}
+              star={item.reviews.average_rating}
+              img={item.images[0].large_image_url}
             />
           </div>
         ))}
+
+        {error && <p>data not found !!</p>}
+        {isLoading && <p>.. loading</p>}
       </div>
       <div className="DailyDiscovBTn">
         <button onClick={handleLimit}>See More</button>
