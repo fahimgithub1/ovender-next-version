@@ -5,13 +5,15 @@ export const productsApi = apiSlices.injectEndpoints({
     getAllProducts: builder.query({
       query: () => "api/products",
     }),
-  }),
 
-  endpoints: (builder) => ({
     getAllCategoris: builder.query({
       query: () => "api/categories",
+    }),
+
+    getSlider: builder.query({
+      query: () => "api/sliders",
     }),
   }),
 })
 
-export const { useGetAllProductsQuery, useGetAllCategorisQuery } = productsApi;
+export const { useGetAllProductsQuery, useGetAllCategorisQuery, useGetSliderQuery } = productsApi;

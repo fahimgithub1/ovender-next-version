@@ -53,7 +53,7 @@ const owlitmes = [
 ];
 
 export default function Categoris() {
-  const { data: Categories, error, isLoading } = useGetAllCategorisQuery();
+  const { data: Categories, isError, isLoading } = useGetAllCategorisQuery();
 
   return (
     <BgWrapper>

@@ -308,7 +308,7 @@ export default function DailyProduct() {
       <SectionTitle title="Daily Discover" />
 
       <div className="row">
-        {!error && productInfo.data.slice(0, limit).map((item) => (
+        {productInfo.data.slice(0, limit).map((item) => (
           <div className="col-6 col-lg-2 col-md-3 col-sm-4" key={item.id}>
             <ProductCard
               key={item.id}
@@ -317,8 +317,8 @@ export default function DailyProduct() {
               price={item.price}
               disCount={0}
               sold={item.sold}
-              star={item.reviews.average_rating}
-              img={item.images[0].large_image_url}
+              // star={item.reviews.average_rating}
+              // img={item.images[0].large_image_url}
             />
           </div>
         ))}

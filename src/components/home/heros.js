@@ -1,7 +1,11 @@
 import HerosWrapper from "@/layouts/herosWrapper";
+import { useGetSliderQuery } from "@/pages/api/apiSlices";
 import React from "react";
 
 export default function Heros() {
+  const {data:slider} = useGetSliderQuery()
+  console.log(slider)
+
   return (
     <HerosWrapper>
       <div className="row">
@@ -45,7 +49,7 @@ export default function Heros() {
 
               <div className="carousel-item active" data-bs-interval="2000">
                 <img
-                  src="http://ovendar.com.bd/public/assets/Fa-responsive-css/slider7.jpg"
+                  src={slider.data[1].image_url}
                   className="d-block w-100"
                   alt="..."
                 />
@@ -53,7 +57,7 @@ export default function Heros() {
 
               <div className="carousel-item active" data-bs-interval="3000">
                 <img
-                  src="http://ovendar.com.bd/public/assets/Fa-responsive-css/slider7.jpg"
+                  src={slider.data[0].image_url}
                   className="d-block w-100"
                   alt="..."
                 />
