@@ -1,13 +1,54 @@
+import { addCartItems, addItems, removeItems } from "@/store/slices/cartItems";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function TopMid() {
+  const [quantity, setQuantity] = useState(1);
+
+  let addtoChartInfo = {
+    quantity: quantity,
+    // itemId: producId
+    itemId: 1,
+  };
+
+  const dispatch = useDispatch();
+  const date = useSelector((state) => {
+    return state.cartItems;
+  });
+  console.log(date);
+
+  // const addCartHandler = (payload) =>{
+  //   console.log("addCartHandler() Clicked = " + payload);
+  //   dispatch(addItems(payload))
+  // }
+
+  // const removeCartHandler = (payload) =>{
+  //   console.log("removeItems() Clicked = " + payload);
+  //   dispatch(removeItems(payload))
+  // }
+
+  const addCartItemsHandler = (payload) => {
+    console.log("addITmes() Clicked = " + payload);
+    dispatch(addCartItems({ type: "addCart", quantity: quantity }));
+  };
+
+  // for incrment and disciment producnt
+  const quanityHandler = (props) => {
+    if (props === "plus" && quantity < 8) {
+      setQuantity(quantity + 1);
+    } else if (props === "minus" && quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
+
   return (
     <div className="col-lg-4 col-md-7 col-sm-6 product-view-area">
       <div className="part-txt">
         <h2 className="main-product-title">
           Headband Foldable Stereo Bluetooth Headphones Wireless Headset
         </h2>
+
         <div className="review">
           <span className="star">
             <i className="fa-solid fa-star"></i>
@@ -95,14 +136,20 @@ export default function TopMid() {
                       min="1"
                       max="100"
                       step="1"
-                      defaultValue="1"
-                      readOnly 
+                      value={quantity}
+                      readOnly
                     />
                     <div className="quantity-nav">
-                      <div className="quantity-button quantity-down">
+                      <div
+                        className="quantity-button quantity-down"
+                        onClick={() => quanityHandler("minus")}
+                      >
                         <i className="fa-solid fa-minus"></i>
                       </div>
-                      <div className="quantity-button quantity-up">
+                      <div
+                        className="quantity-button quantity-up"
+                        onClick={() => quanityHandler("plus")}
+                      >
                         <i className="fa-solid fa-plus"></i>
                       </div>
                     </div>
@@ -114,7 +161,10 @@ export default function TopMid() {
         </form>
 
         <div className="btn-box">
-          <button id="addToCart">
+          <button
+            id="addToCart"
+            onClick={() => addCartItemsHandler(addtoChartInfo)}
+          >
             <span>
               <i className="fa fa-cart-shopping"></i>
             </span>{" "}
