@@ -52,8 +52,27 @@ const owlitmes = [
   },
 ];
 
+
+
 export default function Categoris() {
   const { data: Categories, isError, isLoading } = useGetAllCategorisQuery();
+  console.log(Categories);
+
+  let cateDiv = ''
+
+  if(Categories !== undefined){
+    cateDiv = Categories.data.map((item) => (
+      <SwiperSlide key={item.id}>
+        <CategorisCard
+          name={item.name}
+          slug={item.slug}
+          img={item.image_url}
+        />
+      </SwiperSlide>
+    )) ;
+  }else{
+    
+  } 
 
   return (
     <BgWrapper>
@@ -78,15 +97,19 @@ export default function Categoris() {
           },
         }}
       >
-        {Categories.data.map((item) => (
-          <SwiperSlide key={item.id}>
-            <CategorisCard
-              name={item.name}
-              slug={item.slug}
-              img={item.image_url}
-            />
-          </SwiperSlide>
-        ))}
+        
+        {cateDiv}
+        {/* {Categories !== ""
+          ? Categories.data.map((item) => (
+              <SwiperSlide key={item.id}>
+                <CategorisCard
+                  name={item.name}
+                  slug={item.slug}
+                  img={item.image_url}
+                />
+              </SwiperSlide>
+            ))
+          : ""} */}
       </Swiper>
     </BgWrapper>
   );

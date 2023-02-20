@@ -47,7 +47,7 @@ export default function Heros() {
                 />
               </div>
 
-              <div className="carousel-item active" data-bs-interval="2000">
+              {/* <div className="carousel-item" data-bs-interval="2000">
                 <img
                   src={slider.data[1].image_url}
                   className="d-block w-100"
@@ -55,13 +55,13 @@ export default function Heros() {
                 />
               </div>
 
-              <div className="carousel-item active" data-bs-interval="3000">
+              <div className="carousel-item " data-bs-interval="3000">
                 <img
                   src={slider.data[0].image_url}
                   className="d-block w-100"
                   alt="..."
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

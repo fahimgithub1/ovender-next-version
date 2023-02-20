@@ -303,25 +303,32 @@ export default function DailyProduct() {
     setLimit(limit + 12);
   };
 
+  let productDiv = ''
+
+  if (productInfo !== undefined) {
+    productDiv = productInfo.data.slice(0, limit).map((item) => (
+      <div className="col-6 col-lg-2 col-md-3 col-sm-4" key={item.id}>
+        <ProductCard
+          key={item.id}
+          id={item.id}
+          name={item.name}
+          price={item.price}
+          disCount={0}
+          sold={item.sold}
+          star={item.reviews.average_rating}
+          img={item.images[0].large_image_url}
+        />
+      </div>
+    ));
+  } else {
+  }
+
   return (
     <SectionWrapper>
       <SectionTitle title="Daily Discover" />
 
       <div className="row">
-        {productInfo.data.slice(0, limit).map((item) => (
-          <div className="col-6 col-lg-2 col-md-3 col-sm-4" key={item.id}>
-            <ProductCard
-              key={item.id}
-              id={item.id}
-              name={item.name}
-              price={item.price}
-              disCount={0}
-              sold={item.sold}
-              star={item.reviews.average_rating}
-              img={item.images[0].large_image_url}
-            />
-          </div>
-        ))}
+        {productDiv}
 
         {error && <p>data not found !!</p>}
         {isLoading && <p>.. loading</p>}
