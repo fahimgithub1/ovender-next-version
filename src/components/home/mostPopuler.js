@@ -110,6 +110,7 @@ export default function MostPopuler() {
         {productInfo.map((item) => (
           <SwiperSlide key={item.id}>
             <PopulerCard
+              ProductClass= "MostPopularCard"
               key={item.id}
               id={item.id}
               name={item.name}

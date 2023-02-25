@@ -3,7 +3,7 @@ import React from "react";
 
 export default function PopulerCard(props) {
   return (
-    <div className="ProductCard ProductCard1">
+    <div className={`ProductCard ProductCard1 ${props.ProductClass}`}>
       <Link href={`/Product/${props.id}`} className="d-block">
         <div className="ImageBox">
           <img src="/images/prduct.jpg" alt="" />
@@ -13,6 +13,7 @@ export default function PopulerCard(props) {
           <p className="Pname">
             {props.name}
           </p>
+          
           <div className="price">
             <ul>
               <li>

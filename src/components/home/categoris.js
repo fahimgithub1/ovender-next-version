@@ -55,7 +55,7 @@ const owlitmes = [
 
 
 export default function Categoris() {
-  const { data: Categories, isError, isLoading } = useGetAllCategorisQuery();
+  const { data: Categories, error, isLoading } = useGetAllCategorisQuery();
   console.log(Categories);
 
   let cateDiv = ''
@@ -99,6 +99,8 @@ export default function Categoris() {
       >
         
         {cateDiv}
+        {error && <p>data not found !!</p>}
+        {isLoading && <p>.. loading</p>}
         {/* {Categories !== ""
           ? Categories.data.map((item) => (
               <SwiperSlide key={item.id}>

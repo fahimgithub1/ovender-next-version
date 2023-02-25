@@ -321,6 +321,7 @@ export default function DailyProduct() {
       </div>
     ));
   } else {
+    
   }
 
   return (
