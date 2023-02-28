@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-export default function TopMid() {
+export default function TopMid(props) {
   const [quantity, setQuantity] = useState(1);
 
   let addtoChartInfo = {
@@ -46,8 +46,9 @@ export default function TopMid() {
     <div className="col-lg-4 col-md-7 col-sm-6 product-view-area">
       <div className="part-txt">
         <h2 className="main-product-title">
-          Headband Foldable Stereo Bluetooth Headphones Wireless Headset
+          {props.singleProduct.name}
         </h2>
+        <p>{props.singleProduct.short_description}</p>
 
         <div className="review">
           <span className="star">
@@ -57,37 +58,42 @@ export default function TopMid() {
             <i className="fa-solid fa-star"></i>
             <i className="fa-solid fa-star"></i>
           </span>
-          <span className="rating-amount">3 Reviews</span>
+          <span className="rating-amount">({props.singleProduct.reviews.average_rating})</span>
         </div>
 
         <p className="price">
-          <span>Tk 96.00</span> Tk 75.00
+          {props.singleProduct.price}
         </p>
 
         <ul className="short-details">
           <li>
-            Availability: <span>In stock</span>
+            Availability: {props.singleProduct.in_stock ? <span>In stock</span> : <span>out of stock</span>}
           </li>
           <li>
-            Product Code: <span>#4657</span>
+            Product Code: <span>#{props.singleProduct.sku}</span>
           </li>
-          <li>
+
+          {/* stop for now */}
+          {/* <li>
             Tags: <span>Fashion, Hood, classNameic</span>
-          </li>
+          </li> */}
         </ul>
 
+        {/* stop for now */}
         <div className="VariantColor">
-          <div className="ProductColor">
+          {/* stop for now */}
+          {/* <div className="ProductColor">
             <span>Color:</span>
             <div className="BtnsDiv">
               <button className="ColorBtn1"></button>
               <button className="ColorBtn2"></button>
               <button className="ColorBtn3"></button>
             </div>
-          </div>
+          </div> */}
 
+          {/* stop for now */}
           <div className="Variant">
-            <span>Variant:</span>
+            {/* <span>Variant:</span>
 
             <div className="VariantImgs">
               <div className="VarImg">
@@ -99,9 +105,9 @@ export default function TopMid() {
               <div className="VarImg">
                 <img src="/images/prduct.jpg" alt="" />
               </div>
-            </div>
+            </div> */}
 
-            <div className="VariantImgs">
+            {/* <div className="VariantImgs">
               <div className="TextVariant">
                 <span>Variant1</span>
               </div>
@@ -120,7 +126,7 @@ export default function TopMid() {
               <div className="TextVariant">
                 <span>Variant3</span>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 

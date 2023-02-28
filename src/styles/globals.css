@@ -2311,6 +2311,7 @@ html body .mz-expand>#crMz62448639646>#mzCrA62448639646 {
 .product-view-area .part-txt form .product-count .quantity {
     border-radius: 7px;
     overflow: hidden;
+    z-index: -100;
 }
 
 .product-view-area .part-txt .btn-box {

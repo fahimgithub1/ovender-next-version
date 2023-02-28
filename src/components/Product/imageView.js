@@ -33,10 +33,10 @@ export default function ImageView(props) {
             smallImage: {
               alt: "Wristwatch by Ted Baker London",
               isFluidWidth: true,
-              src: props.images.large_image_url,
+              src: props.singleProduct.base_image.large_image_url,
             },
             largeImage: {
-              src: props.images.slice(0,1),
+              src: props.singleProduct.base_image.large_image_url,
               width: 1200,
               height: 1800,
             },
