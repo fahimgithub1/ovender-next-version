@@ -24,7 +24,7 @@ const smalImages = [
   },
 ];
 
-export default function ImageView() {
+export default function ImageView(props) {
   return (
     <div className="col-lg-5 col-md-5 col-sm-5">
       <div className="fluid__image-container">
@@ -33,10 +33,10 @@ export default function ImageView() {
             smallImage: {
               alt: "Wristwatch by Ted Baker London",
               isFluidWidth: true,
-              src: watchImg687,
+              src: props.images.large_image_url,
             },
             largeImage: {
-              src: watchImg1200,
+              src: props.images.slice(0,1),
               width: 1200,
               height: 1800,
             },

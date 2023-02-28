@@ -8,9 +8,21 @@ import ShockingSale from "@/components/home/ShockingSale";
 import AddSection from "@/lib/addSection";
 import Footer from "@/navAndFooter/footer";
 import Navber from "@/navAndFooter/navber";
+import { useEffect, useState } from "react";
 import HeaderCom from "../lib/header";
 
+// let item = false;
+
 export default function Home() {
+  // const [items, setItems] = useState(false);
+
+  // useEffect(() => {
+  //   localStorage.setItem("items", JSON.stringify(items));
+  // }, [items]);
+
+  // // localStorage.setItem("items", JSON.stringify(items));
+  // const item = JSON.parse(localStorage.getItem('items'));
+  // console.log(item)
 
   return (
     <>

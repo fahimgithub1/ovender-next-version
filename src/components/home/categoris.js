@@ -9,64 +9,34 @@ import "swiper/css/free-mode";
 import CategorisCard from "./CategorisCard";
 import { useGetAllCategorisQuery } from "@/pages/api/apiSlices";
 
-const owlitmes = [
-  {
-    id: 1,
-    name: "Women's clothing",
-  },
-  {
-    id: 2,
-    name: "Women's Shoes",
-  },
-  {
-    id: 3,
-    name: "Women's Bag",
-  },
-  {
-    id: 4,
-    name: "Home And Living",
-  },
-  {
-    id: 5,
-    name: "Gift Card",
-  },
-  {
-    id: 6,
-    name: "Health & Beauty",
-  },
-  {
-    id: 7,
-    name: "Baby&Toys",
-  },
-  {
-    id: 8,
-    name: "Fashion Accessories",
-  },
-  {
-    id: 9,
-    name: "Automotive",
-  },
-  {
-    id: 10,
-    name: "Muslim Fashion",
-  },
-];
-
-
 
 export default function Categoris() {
   const { data: Categories, error, isLoading } = useGetAllCategorisQuery();
-  console.log(Categories);
 
-  let cateDiv = ''
+  let cateDiv = '';
+  let cateDiv2 = '';
 
   if(Categories !== undefined){
-    cateDiv = Categories.data.map((item) => (
+    cateDiv = Categories.data.slice(0, 10).map((item) => (
       <SwiperSlide key={item.id}>
         <CategorisCard
           name={item.name}
           slug={item.slug}
-          img={item.image_url}
+          img={item.category_icon_path}
+        />
+      </SwiperSlide>
+    )) ;
+  }else{
+    
+  } 
+
+  if(Categories !== undefined){
+    cateDiv2 = Categories.data.slice(10, 20).map((item) => (
+      <SwiperSlide key={item.id}>
+        <CategorisCard
+          name={item.name}
+          slug={item.slug}
+          img={item.category_icon_path}
         />
       </SwiperSlide>
     )) ;
@@ -101,17 +71,31 @@ export default function Categoris() {
         {cateDiv}
         {error && <p>data not found !!</p>}
         {isLoading && <p>.. loading</p>}
-        {/* {Categories !== ""
-          ? Categories.data.map((item) => (
-              <SwiperSlide key={item.id}>
-                <CategorisCard
-                  name={item.name}
-                  slug={item.slug}
-                  img={item.image_url}
-                />
-              </SwiperSlide>
-            ))
-          : ""} */}
+      </Swiper>
+
+      <Swiper
+        freeMode={true}
+        modules={[FreeMode]}
+        className="mySwiper"
+        grabCursor={true}
+        slidesPerView="auto"
+        spaceBetween={10}
+        breakpoints={{
+          0: {
+            slidesPerView: 3,
+          },
+          767: {
+            slidesPerView: 5,
+          },
+          1024: {
+            slidesPerView: 10,
+          },
+        }}
+      >
+        
+        {cateDiv2}
+        {error && <p>data not found !!</p>}
+        {isLoading && <p>.. loading</p>}
       </Swiper>
     </BgWrapper>
   );

@@ -2,8 +2,15 @@ import Link from "next/link";
 import React from "react";
 
 export default function ProductCard(props) {
-  const src = props.img
+  const src = props.img;
   const porductID = props.id;
+
+  const disCountPrice = (
+    <>
+      <p>{Number(props.price) - Number("props.disCount")}</p>
+      <span className="ManPrice">{props.price}</span>
+    </>
+  );
 
   return (
     <div className="ProductCard ProductCard1">
@@ -19,8 +26,15 @@ export default function ProductCard(props) {
         <div className="textPart">
           <p className="Pname">{props.name}</p>
           <div className="price">
-            <p>{props.price - props.disCount}</p>
-            <span className="ManPrice">{props.price}</span>
+            {Number("props.disCount") < Number(props.price) &&
+            Number("props.disCount") != 0 ? (
+              disCountPrice
+            ) : (
+              <>
+                <p className="mb-2">{props.price}</p>
+              </>
+            )}
+
             <ul>
               <li>
                 {" "}
