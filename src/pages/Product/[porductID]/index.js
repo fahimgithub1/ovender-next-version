@@ -31,9 +31,9 @@ export default function ProductPage() {
 
         <main>
           <Navber />
-          <ProductView singleProduct={singleProduct.data} />
-          <ShopRatting />
-          <ProductDiscription singleProduct={singleProduct.data} />
+          <ProductView singleProduct={singleProduct} />
+          <ShopRatting singleProduct={singleProduct} />
+          <ProductDiscription singleProduct={singleProduct} />
           <Review />
           <AddSection img={img} />
           <RelatedProduct />
@@ -42,8 +42,6 @@ export default function ProductPage() {
       </>
     );
   }
-
-  // console.log(singleProduct.data)
 
   return !isLoading && !error && mainBody;
 }

@@ -1,7 +1,9 @@
 import BgWrapper from "@/layouts/bgWrapper";
 import React from "react";
 
-export default function ShopRatting() {
+export default function ShopRatting(props) {
+  const singleProduct = props.singleProduct.data.reviews;
+
   return (
     <BgWrapper>
       <div className="row">
@@ -16,13 +18,28 @@ export default function ShopRatting() {
           <div>
             <ul>
               <li>
-                Rating <span>2.6k</span>
+                Rating{" "}
+                <span>
+                  {singleProduct.average_rating === 0
+                    ? 5
+                    : singleProduct.average_rating}
+                </span>
               </li>
+
               <li>
-                Response Rate <span>2.6k</span>
+                Response Rate{" "}
+                <span>
+                  {singleProduct.percentage ? 100 : singleProduct.percentage}%
+                </span>
               </li>
+
               <li>
-                Joined <span>2.6k</span>
+                Joined{" "}
+                <span>
+                  {singleProduct.total_rating === 0
+                    ? 10
+                    : singleProduct.total_rating}
+                </span>
               </li>
             </ul>
           </div>
