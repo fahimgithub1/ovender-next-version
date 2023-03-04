@@ -31,14 +31,14 @@ export default function ImageView(props) {
         />
       </div>
 
-      <div className="SmallImg d-flex">
+      {/* <div className="SmallImg d-flex">
         {props.images.map((item) => {
           <SmalImagBlox
             key={item.id}
             smalHref={item.small_image_url}
           />;
         })}
-      </div>
+      </div> */}
     </div>
   );
 }

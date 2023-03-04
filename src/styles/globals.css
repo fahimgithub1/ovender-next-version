@@ -2314,6 +2314,10 @@ html body .mz-expand>#crMz62448639646>#mzCrA62448639646 {
     z-index: -100;
 }
 
+.product-view-area:hover .rapper-quantity{
+    z-index: 0 !important;
+}
+
 .product-view-area .part-txt .btn-box {
     display: -webkit-box;
     display: -ms-flexbox;

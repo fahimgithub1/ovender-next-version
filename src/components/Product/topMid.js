@@ -7,8 +7,6 @@ import { addCartItems, addItems, removeItems } from "@/store/slices/cartItems";
 
 export default function TopMid(props) {
   const productInfo = props.singleProduct.singleProduct.data;
-  console.log("top div")
-  console.log(productInfo)
   let inStock = productInfo.in_stock;
   const [quantity, setQuantity] = useState(1);
 
@@ -22,7 +20,7 @@ export default function TopMid(props) {
   const date = useSelector((state) => {
     return state.cartItems;
   });
-  console.log(date);
+  // console.log(date);
 
   // const addCartHandler = (payload) =>{
   //   console.log("addCartHandler() Clicked = " + payload);
