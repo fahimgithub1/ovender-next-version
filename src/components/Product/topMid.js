@@ -1,14 +1,15 @@
-import { addCartItems, addItems, removeItems } from "@/store/slices/cartItems";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import AddToCartAndWish from "./addToCartAndWish";
 import ProductCounting from "./productCounting";
 import ProductShare from "./productShare";
+import { addCartItems, addItems, removeItems } from "@/store/slices/cartItems";
 
 export default function TopMid(props) {
   const productInfo = props.singleProduct.singleProduct.data;
+  console.log("top div")
+  console.log(productInfo)
   let inStock = productInfo.in_stock;
-
   const [quantity, setQuantity] = useState(1);
 
   let addtoChartInfo = {
@@ -21,7 +22,7 @@ export default function TopMid(props) {
   const date = useSelector((state) => {
     return state.cartItems;
   });
-  // console.log(date);
+  console.log(date);
 
   // const addCartHandler = (payload) =>{
   //   console.log("addCartHandler() Clicked = " + payload);
@@ -51,6 +52,7 @@ export default function TopMid(props) {
     <div className="col-lg-4 col-md-7 col-sm-6 product-view-area">
       <div className="part-txt">
         <h2 className="main-product-title">{productInfo.name}</h2>
+        <p>{productInfo.short_description}</p>
 
         <div className="review">
           <span className="star">
@@ -78,8 +80,9 @@ export default function TopMid(props) {
           </li>
         </ul>
 
+        {/* stop for now */}
         <div className="VariantColor">
-          {/* color */}
+          {/* stop for now */}
           {/* <div className="ProductColor">
             <span>Color:</span>
 
@@ -90,18 +93,26 @@ export default function TopMid(props) {
             </div>
           </div> */}
 
+          {/* stop for now */}
           <div className="Variant">
-            <span>Variant:</span>
+            {/* <span>Variant:</span>
 
             <div className="VariantImgs">
               {productInfo.images.slice(0, 4).map((item) => (
                 <div className="VarImg" key={item.id}>
                   <img src={item.url} alt="" />
-                </div>
-              ))}
-            </div>
 
-            {/* size  */}
+              <div className="VarImg">
+                <img src="/images/prduct.jpg" alt="" />
+              </div>
+              <div className="VarImg">
+                <img src="/images/prduct.jpg" alt="" />
+              </div>
+              <div className="VarImg">
+                <img src="/images/prduct.jpg" alt="" />
+              </div>
+            </div> */}
+
             {/* <div className="VariantImgs">
               <div className="TextVariant">
                 <span>Variant1</span>

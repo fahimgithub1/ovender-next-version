@@ -7,11 +7,9 @@ const watchImg687 =
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6O3yPSboyC931ngvDI0RDfDfZFMqc1PtsnsAvk6t7&s";
 const watchImg1200 =
   "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZHVjdHN8ZW58MHx8MHx8&w=1000&q=80";
-// import img "/images/prduct.jpg"s
 
 export default function ImageView(props) {
   const frist_img =  props.images[0];
-  console.log(props.images)
 
   return (
     <div className="col-lg-5 col-md-5 col-sm-5">

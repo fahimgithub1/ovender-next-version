@@ -8,6 +8,7 @@ export default function ProductView(props) {
     <section className="MainBodyTop HerosSection sectionMarginBot productPages">
       <div className="container">
         <div className="row">
+
           <ImageView images={props.singleProduct.data.images} />
 
           <TopMid singleProduct={props} />

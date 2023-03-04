@@ -2,7 +2,7 @@ import BgWrapper from "@/layouts/bgWrapper";
 import React from "react";
 
 export default function ProductDiscription(props) {
-  const discition = props.singleProduct.data
+  const discition = props.singleProduct.data;
 
   return (
     <BgWrapper>
